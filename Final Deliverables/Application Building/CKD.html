@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chronic Kidney Disease</title>
+	
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"></link>
+	
+</head>
+
+<body>
+	<div class="header">
+		<img src="{{ url_for('static',filename='css/CKD.jpeg') }}" class="thumbnail">
+		<h1>CHRONIC KIDNEY DISEASE DETECTION</h1>
+	</div>
+	<div class="forms">
+		<img src="{{ url_for('static',filename='css/background.jpeg') }}" class="image">
+		<form action ="{{ url_for('y_predict')}}" method="post">
+			<div class="flex">
+				<div class="forminput">
+					<label>Age </label>
+					<input type="number" step="any" id='age' name='age' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Blood Pressure </label>
+					<input type="number" step="any" id='bp' name='bp' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Specific Gravity </label>
+					<input type="number" step="any" id='sg' name='sg' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Albumin </label>
+					<input type="number" step="any" id='al' name='al' />
+					<br />
+				</div>
+			</div>
+			<div class="flex">
+
+				<div class="forminput">
+					<label>Sugar </label>
+					<input type="number" step="any" id='su' name='su' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Red Blood Cells </label>
+					<input type="number" step="any" id='rbc' name='rbc' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Pus cells </label>
+					<input type="number" step="any" id='pc' name='pc' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Pus Cell clumps </label>
+					<input type="number" step="any" id='pcc' name='pcc' />
+					<br />
+				</div>
+			</div>
+			<div class="flex">
+
+				<div class="forminput">
+					<label>Bacteria </label>
+					<input type="number" step="any" id='ba' name='ba' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Blood Glucose Random </label>
+					<input type="number" step="any" id='bgr' name='bgr' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Blood Urea </label>
+					<input type="number" step="any" id='bu' name='bu' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Serum Creatinine </label>
+					<input type="number" step="any" id='sc' name='sc' />
+					<br />
+				</div>
+			</div>
+			<div class="flex">
+
+				<div class="forminput">
+					<label>Sodium </label>
+					<input type="number" step="any" id='sod' name='sod' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Pottasium </label>
+					<input type="number" step="any" id='pot' name='pot' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Heamoglobin </label>
+					<input type="number" step="any" id='hemo' name='hemo' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Packed cells volume </label>
+					<input type="number" step="any" id='pcv' name='pcv' />
+					<br />
+				</div>
+			</div>
+			<div class="flex">
+
+				<div class="forminput">
+					<label>White Blood Cells Count </label>
+					<input type="number" step="any" id='wc' name='wc' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Red Blood Cells Count </label>
+					<input type="number" step="any" id='rc' name='rc' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Hypertension </label>
+					<input type="number" step="any" id='htm' name='htm' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Diabetes Mellitus </label>
+					<input type="number" step="any" id='dm' name='dm' />
+					<br />
+				</div>
+			</div>
+			<div class="flex">
+
+				<div class="forminput">
+					<label>Coronary artery disease </label>
+					<input type="number" step="any" id='cad' name='cad' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Appetite </label>
+					<input type="number" step="any" id='appet' name='appet' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Pedal edema </label>
+					<input type="number" step="any" id='pe' name='pe' />
+					<br />
+				</div>
+				<div class="forminput">
+					<label>Anemia </label>
+					<input type="number" step="any" id='ane' name='ane' />
+					<br />
+				</div>
+			</div>
+		
+		<div class="flex">
+			<div class="forminput">
+				<button type="submit" class="btn btn-warning btn-block btn-Large" name="Submit" placeholder="Submit" onclick="prediction()">DIAGNOSE</button>
+			</div>
+			
+		</div>
+		{{ prediction_text }}
+ </form>
+	</div>
+	 
+</body>
+
+
+</html>
