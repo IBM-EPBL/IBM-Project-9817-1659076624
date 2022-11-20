@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card-wrapper">
+
+    <div class="card">
+
+      <h1 class="center">Create an Account</h1>
+
+      <form name="signup_form">
+
+        <label for="name">Age</label>
+        <input type="number" name="age" class="field" required>
+
+        <label for="email">Blood Pressure</label>
+        <input type="number" name="bp" class="field" required>
+
+        <label for="password">Specific Gravity</label>
+        <input type="number" name="sg" class="field" required>
+        
+        <label for="password">Albumin</label>
+        <input type="number" name="al" class="field" required>
+
+        <label for="password">Sugar</label>
+        <input type="number" name="su" class="field" required>
+        
+        <label for="password">Red Blood Cells</label>
+        <input type="number" name="rbc" class="field" required>
+        
+        <label for="password">Pus Cells</label>
+        <input type="number" name="pc" class="field" required>
+        
+        <label for="password">Pus Cells Clumps</label>
+        <input type="number" name="pcc" class="field" required>
+
+        <label for="password">Bacteria</label>
+        <input type="number" name="ba" class="field" required>
+
+        <label for="password">Blood Glucose Random</label>
+        <input type="number" name="bgr" class="field" required>
+        
+        <label for="password">Blood Urea</label>
+        <input type="number" name="bu" class="field" required>
+        
+        <label for="password">Serum Creatinine</label>
+        <input type="number" name="sc" class="field" required>
+        
+        <label for="password">Sodium</label>
+        <input type="number" name="sod" class="field" required>
+        
+        <label for="password">Pottasium</label>
+        <input type="number" name="pot" class="field" required>
+        
+        <label for="password">Heamoglobin</label>
+        <input type="number" name="hemo" class="field" required>
+        
+        <label for="password">Packed Cells Volume</label>
+        <input type="number" name="pcv" class="field" required>
+        
+        <label for="password">White Blood Cells Count</label>
+        <input type="number" name="wc" class="field" required>
+        
+        <label for="password">Red Blood Cells Count</label>
+        <input type="number" name="rc" class="field" required>
+        
+        <label for="password">Hypertension</label>
+        <input type="number" name="htm" class="field" required>
+        
+        <label for="password">Diabetes Mellitus</label>
+        <input type="number" name="dm" class="field" required>
+        
+        <label for="password">Coronary Artery Disease</label>
+        <input type="number" name="cad" class="field" required>
+        
+        <label for="password">Appetite</label>
+        <input type="number" name="appet" class="field" required>
+        
+        <label for="password">Pedal Edema</label>
+        <input type="number" name="pe" class="field" required>
+        
+        <label for="password">Anemia</label>
+        <input type="number" name="ane" class="field" required>
+
+
+        <p class="error error--hidden"></p>
+
+        <input type="submit" value="Sign Up" class="btn">
+      
+      </form>
+      
+    </div>
+  </div>
+{% endblock %}
